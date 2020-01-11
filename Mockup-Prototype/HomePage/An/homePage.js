@@ -34,21 +34,30 @@ else {
 login.onclick = () => {
     if(loginSignIn.style.display) {
         loginSignIn.style.display = 'flex';
+        loginSignUp.style.display = 'none';
     }
 }
 
 successbtnSignUp.onclick = () => {
-    if(inputFullname.value && inputEmail.value && inputConformEmail.value && inputPhone.value && inputPassword.value && inputEmail.value == inputConformEmail.value) {
-        InformationLogin.push({
-            'Fullname' : inputFullname.value,
-            'Email' : inputEmail.value,
-            'Phone' : inputPhone.value,
-            'Password' : inputPassword.value
-        });
-        localStorage.setItem('InformationLogin' ,JSON.stringify(InformationLogin));
-        alert('Register an account successfully, please login');
-        loginSignIn.style.display = 'flex';
-        loginSignUp.style.display = 'none';
+    for(let i = 0; i < InformationLogin.length; i++) {
+        if(inputEmail.value !== InformationLogin[i].Email || inputPhone.value !== InformationLogin[i].Phone) {
+            if(inputFullname.value && inputEmail.value && inputConformEmail.value && inputPhone.value && inputPassword.value && inputEmail.value == inputConformEmail.value) {
+                InformationLogin.push({
+                    'Fullname' : inputFullname.value,
+                    'Email' : inputEmail.value,
+                    'Phone' : inputPhone.value,
+                    'Password' : inputPassword.value
+                });
+                localStorage.setItem('InformationLogin' ,JSON.stringify(InformationLogin));
+                alert('Register an account successfully, please login');
+                loginSignIn.style.display = 'flex';
+                loginSignUp.style.display = 'none';
+                return;
+            }
+        } else {
+            alert('This account or phone number already exists, please register again');
+            return;
+        }
     }
 }
 
@@ -60,6 +69,10 @@ btnSignUp.onclick = () => {
 }
 
 btnSignIn.onclick = () => {
+    if(InformationLogin[0] === undefined){
+        alert('The account or password is incorrect, please enter again');
+        return;
+    }
     for(let i = 0; i < InformationLogin.length; i++) {
         if(inputLoginUsername.value == InformationLogin[i].Email || inputLoginUsername.value == InformationLogin[i].Phone && inputLoginPassword.value == InformationLogin[i].Password) {
             login.innerHTML = '';
