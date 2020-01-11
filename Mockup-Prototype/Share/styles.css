@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inconsolata', monospace;
+}
+
+header {
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, .4);
+    position: sticky;
+    top: 0px;
+    background: white;
+}
+
+nav {
+    min-height: 10vh;
+    margin: auto;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav h1, nav ul {
+    font-size: 1.5rem;
+    flex: 1;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+nav a {
+    color: black;
+    text-decoration: none;
+}
+
+section {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section h2 {
+    font-size: 3rem;
+    color: white;
+}
+
+#home {
+    background: linear-gradient(to right, #1d976c, #93f9b9);
+}
+
+.home {
+    padding: 8px;
+    border-radius: 8px;
+    transition: 0.4s;
+}
+
+.home:hover {
+    background: linear-gradient(to right, #1d976c, #93f9b9);
+    box-shadow: 0px 4px  8px 0px;
+    color: white;
+    transition: 0.4s;
+}
+
+#select-game {
+    background: linear-gradient(to right, #4776e6, #8e54e9);
+}
+
+.select-game {
+    padding: 8px;
+    border-radius: 8px;
+    transition: 0.4s;
+}
+
+.select-game:hover {
+    background: linear-gradient(to right, #4776e6, #8e54e9);
+    box-shadow: 0px 4px  8px 0px;
+    color: white;
+    transition: 0.4s;
+}
+
+#gameplay {
+    background: linear-gradient(to right, #f12711, #f5af19);
+}
+
+.gameplay {
+    padding: 8px;
+    border-radius: 8px;
+    transition: 0.4s;
+}
+
+.gameplay:hover {
+    background: linear-gradient(to right, #f12711, #f5af19);
+    box-shadow: 0px 4px  8px 0px;
+    color: white;
+    transition: 0.4s;
+}
+
+#page-3 {
+    background: linear-gradient(to right, #1d2b64, #f8cdda);
+}
+
+.page-3 {
+    padding: 8px;
+    border-radius: 8px;
+    transition: 0.4s;
+}
+
+.page-3:hover {
+    background: linear-gradient(to right, #1d2b64, #f8cdda);
+    box-shadow: 0px 4px  8px 0px;
+    color: white;
+    transition: 0.4s;
+}
+
+#page-4 {
+    background: linear-gradient(to right, #4cb8c4, #3cd3ad);
+}
+
+.page-4 {
+    padding: 8px;
+    border-radius: 8px;
+    transition: 0.4s;
+}
+
+.page-4:hover {
+    background: linear-gradient(to right, #4cb8c4, #3cd3ad);
+    box-shadow: 0px 4px  8px 0px;
+    color: white;
+    transition: 0.4s;
+}
