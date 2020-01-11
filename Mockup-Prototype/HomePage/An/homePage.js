@@ -46,7 +46,8 @@ successbtnSignUp.onclick = () => {
             'Password' : inputPassword.value
         });
         localStorage.setItem('InformationLogin' ,JSON.stringify(InformationLogin));
-        loginSignIn.style.display = 'none';
+        alert('Register an account successfully, please login');
+        loginSignIn.style.display = 'flex';
         loginSignUp.style.display = 'none';
     }
 }
@@ -66,6 +67,10 @@ btnSignIn.onclick = () => {
             loginSignIn.style.display = 'none';
             loginSignUp.style.display = 'none';
             login.disabled = 'disabled';
+            return;
+        } else {
+            alert('The account or password is incorrect, please enter again');
+            return;
         }
     }
 }
