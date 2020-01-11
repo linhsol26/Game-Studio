@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Game Studio</title>
+    <link href="https://fonts.googleapis.com/css?family=Inconsolata&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <header>
+        <div>
+            <h1 id="title-game">Game Studio</h1>
+            <button id="login">Login</button>
+        </div>
+    </header>
+
+    <main>
+        <div id="home-page">
+            <div id="login-sign-in" class="login-sign-in" style="display: none;">
+                <form action="">
+                    <h1>
+                        <label for="username">Username:</label>
+                        <input type="text" class="input-information" id="input-username" maxlength="32"
+                            placeholder="Enter your username" required>
+                    </h1>
+                    <h1>
+                        <label for="password">Password:</label>
+                        <input type="password" class="input-information" id="input-password"
+                            maxlength="32" placeholder="Enter your password" required>
+                    </h1>
+                    <button type="button" id="btn-sign-in">Sign In</button>
+                    <button type="button" id="btn-sign-up">Sign Up</button>
+                </form>
+            </div>
+            <div id="login-sign-up" class="login-sign-up" style="display: none;">
+                <form action="">
+                    <h1>
+                       <div style="width: 40%; display: inline-block; text-align: left;"> <label  for="fullname">Full Name:</label></div>
+                        <input type="text" name="fullname" class="input-information" id="input-fullname" maxlength="32" placeholder="Enter your fullname" required>
+                    </h1>
+                    <h1>
+                        <div style="width: 40%; display: inline-block; text-align: left;"><label for="email">Email:</label></div>
+                        <input type="email" name="email" class="input-information" id="input-email" maxlength="32" placeholder="Enter your email" required>
+                    </h1>
+                    <h1>
+                        <div style="width: 40%; display: inline-block; text-align: left;"><label for="conform-email">ConformEmail:</label> </div>
+                        <input type="email" name="conform-email" class="input-information" id="input-conform-email" maxlength="32" placeholder="Enter your email" required>
+                    </h1>
+                    <h1>
+                        <div style="width: 40%; display: inline-block; text-align: left;"><label for="phone">Phone:</label> </div>
+                        <input type="text" name="phone" class="input-information" id="input-phone" maxlength="32" placeholder="Enter your phone" required>
+                    </h1>
+                    <h1>
+                        <div style="width: 40%; display: inline-block; text-align: left;"><label for="password">Password:</label></div>
+                        <input type="password" name="password-sign-up" class="input-information" id="input-password-sign-up" maxlength="32" placeholder="Enter your password" required>
+                    </h1>
+                    <button type="button" id="btn-success-sign-up">Sign Up</button>
+                </form>
+            </div>
+        </div>
+    </main>
+    <script src="./homePage.js"></script>
+</body>
+
+</html>
