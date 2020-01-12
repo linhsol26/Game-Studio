@@ -25,9 +25,22 @@ header div {
     justify-content: space-between;
 }
 
-div h1 {
+div h1,
+div ul {
     font-size: 1.5rem;
     flex: 1;
+}
+
+div ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+div li {
+    color: black;
+    text-decoration: none;
 }
 
 #home-page {
@@ -44,7 +57,8 @@ div h1 {
     box-shadow: 0px 8px 8px 0px rgba(0, 0, 0, .8);
 }
 
-#login {
+#login,
+.header-select {
     background-color: white;
     padding: 8px;
     border: 0px solid white;
@@ -53,11 +67,13 @@ div h1 {
     outline: none;
     color: black;
     cursor: pointer;
+    font-family: 'Inconsolata', monospace;
     font-size: 1.5rem;
     transition: 0.4s;
 }
 
-#login:hover {
+#login:hover,
+.header-select:hover {
     background: linear-gradient(to right, #1d976c, #93f9b9);
     box-shadow: 0px 4px  8px 0px;
     color: white;
@@ -147,6 +163,7 @@ div h1 {
 }
 
 #title-game {
+    font-size: 2rem;
     animation: text-flicker-out-glow 2.5s linear infinite both, shake-horizontal 0.8s cubic-bezier(0.455, 0.030, 0.515, 0.955) infinite both, flicker 0.15s infinite both, textShadow 1.6s infinite both;
 }
 

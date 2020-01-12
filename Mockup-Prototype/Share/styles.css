@@ -6,7 +6,6 @@
 
 body {
     font-family: 'Inconsolata', monospace;
-    background: repeating-linear-gradient(45deg, #222 0 2px, #000 0 7px);
 }
 
 header {
@@ -25,8 +24,7 @@ nav {
     justify-content: space-between;
 }
 
-nav h1,
-nav ul {
+nav h1, nav ul {
     font-size: 1.5rem;
     flex: 1;
 }
@@ -66,7 +64,7 @@ section h2 {
 
 .home:hover {
     background: linear-gradient(to right, #1d976c, #93f9b9);
-    box-shadow: 0px 4px 8px 0px;
+    box-shadow: 0px 4px  8px 0px;
     color: white;
     transition: 0.4s;
 }
@@ -83,7 +81,7 @@ section h2 {
 
 .select-game:hover {
     background: linear-gradient(to right, #4776e6, #8e54e9);
-    box-shadow: 0px 4px 8px 0px;
+    box-shadow: 0px 4px  8px 0px;
     color: white;
     transition: 0.4s;
 }
@@ -100,7 +98,7 @@ section h2 {
 
 .gameplay:hover {
     background: linear-gradient(to right, #f12711, #f5af19);
-    box-shadow: 0px 4px 8px 0px;
+    box-shadow: 0px 4px  8px 0px;
     color: white;
     transition: 0.4s;
 }
@@ -117,7 +115,7 @@ section h2 {
 
 .page-3:hover {
     background: linear-gradient(to right, #1d2b64, #f8cdda);
-    box-shadow: 0px 4px 8px 0px;
+    box-shadow: 0px 4px  8px 0px;
     color: white;
     transition: 0.4s;
 }
@@ -134,12 +132,7 @@ section h2 {
 
 .page-4:hover {
     background: linear-gradient(to right, #4cb8c4, #3cd3ad);
-    box-shadow: 0px 4px 8px 0px;
+    box-shadow: 0px 4px  8px 0px;
     color: white;
     transition: 0.4s;
 }
-
-#title-game {
-    animation: spin 1s infinite;
-}
-

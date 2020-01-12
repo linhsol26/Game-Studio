@@ -21,6 +21,11 @@ const inputPassword = document.getElementById('input-password-sign-up');
 const inputLoginUsername = document.getElementById('input-username');
 const inputLoginPassword = document.getElementById('input-password');
 
+//tab list
+const homePage = document.getElementById('home');
+const selectGame = document.getElementById('select-game');
+const gamePlay = document.getElementById('game-play');
+
 //Save information on localstorage
 let InformationLogin;
 let data = localStorage.getItem('InformationLogin');
@@ -29,6 +34,12 @@ if(data) {
 }
 else {
     InformationLogin = [];
+}
+
+let showMenu = () => {
+    homePage.style.display = 'flex';
+    selectGame.style.display = 'flex';
+    gamePlay.style.display = 'flex';
 }
 
 login.onclick = () => {
@@ -80,6 +91,7 @@ btnSignIn.onclick = () => {
             loginSignIn.style.display = 'none';
             loginSignUp.style.display = 'none';
             login.disabled = 'disabled';
+            showMenu();
             return;
         } else {
             alert('The account or password is incorrect, please enter again');
