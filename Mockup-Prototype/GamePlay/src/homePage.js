@@ -13,7 +13,7 @@ const successbtnSignUp = document.getElementById('btn-success-sign-up');
 //Input form sign up
 const inputFullname = document.getElementById('input-fullname');
 const inputEmail = document.getElementById('input-email');
-const inputConformEmail = document.getElementById('input-conform-email');
+const inputConfirmEmail = document.getElementById('input-confirm-email');
 const inputPhone = document.getElementById('input-phone');
 const inputPassword = document.getElementById('input-password-sign-up');
 
@@ -39,9 +39,9 @@ login.onclick = () => {
 }
 
 successbtnSignUp.onclick = () => {
-    for(let i = 0; i < InformationLogin.length; i++) {
+    for(let i = 0; i <= InformationLogin.length; i++) {
         if(inputEmail.value !== InformationLogin[i].Email || inputPhone.value !== InformationLogin[i].Phone) {
-            if(inputFullname.value && inputEmail.value && inputConformEmail.value && inputPhone.value && inputPassword.value && inputEmail.value == inputConformEmail.value) {
+            if(inputFullname.value && inputEmail.value && inputConfirmEmail.value && inputPhone.value && inputPassword.value && inputEmail.value == inputConfirmEmail.value) {
                 InformationLogin.push({
                     'Fullname' : inputFullname.value,
                     'Email' : inputEmail.value,
@@ -53,12 +53,12 @@ successbtnSignUp.onclick = () => {
                 loginSignIn.style.display = 'flex';
                 loginSignUp.style.display = 'none';
                 return;
+            } else {
+                alert('This account or phone number already exists, please register again');
+                return;
             }
-        } else {
-            alert('This account or phone number already exists, please register again');
-            return;
         }
-    }
+    }   
 }
 
 btnSignUp.onclick = () => {
