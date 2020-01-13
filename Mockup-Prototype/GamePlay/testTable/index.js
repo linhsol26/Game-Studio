@@ -60,5 +60,6 @@ btnDeleteCol.onclick = function () {
     for (let i = 0; i < tagTR.length; i++) {
         tagTR[i].removeChild(tagTR[i].children[tagTR[i].children.length - 1]);
     }
+    hoverEachEmptyBox();
     firstTable--;
 }
