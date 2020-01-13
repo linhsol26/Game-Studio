@@ -95,7 +95,7 @@ btnDeleteCol.onclick = () => {
 
 radioBtn.onclick = () => {
     for (let i = 0; i < tagTD.length; i++) {
-        document.getElementsByClassName("cells")[i].style.cursor = "url(/Share/imagesGame/rungram/Object/Picture1.png) 1 1, auto";
+        document.getElementsByClassName("cells")[i].style.cursor = "url(/GamePlay/images/Picture1.png) 1 1, auto";
     }
     hoverEachEmptyBox();
 }
