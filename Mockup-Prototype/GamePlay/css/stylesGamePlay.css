@@ -1,20 +1,20 @@
+
 .sandbox {
     margin: auto;
     margin-left: -60%;
     position: absolute;
     margin-top: -30%;
-    width: 65.25%;
-    height: 422px;
-    min-height: 100%;
+    width: 65%;
+    min-height: 60vh;
     border-collapse: collapse;
 }
 
 .drawTable {
     margin: auto;
     margin-left: 3%;
-    border: 2px solid black;
-    padding: 30% 5% 15% 60%;
+    padding: 30% 5% 1% 60%;
     width: 50%;
+    min-height: 60vh;
 }
 
 .box-description {
@@ -22,8 +22,9 @@
     margin-left: 3%;
     margin-right: 3%;
     border: 2px solid black;
-    padding: 30% 15% 15% 10%;
-    width: 50%;
+    padding: 25% 15% 15% 10%;
+    width: 30%;
+    min-height: 60vh;
 }
 
 * {
