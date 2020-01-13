@@ -51,7 +51,7 @@ login.onclick = () => {
 
 successbtnSignUp.onclick = () => {
     for(let i = 0; i <= InformationLogin.length; i++) {
-        if(inputEmail.value !== InformationLogin[i].Email || inputPhone.value !== InformationLogin[i].Phone) {
+        if(inputEmail.value && inputPhone.value) {
             if(inputFullname.value && inputEmail.value && inputConfirmEmail.value && inputPhone.value && inputPassword.value && inputEmail.value == inputConfirmEmail.value) {
                 InformationLogin.push({
                     'Fullname' : inputFullname.value,
