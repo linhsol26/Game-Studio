@@ -1,29 +1,19 @@
-.sandbox {
-    margin: auto;
-    margin-left: -60%;
-    position: absolute;
-    margin-top: -30%;
-    width: 65.25%;
-    height: 422px;
-    min-height: 100%;
-    border-collapse: collapse;
+.drawTable {
+    width: 65%;
+    min-height: 60vh;
 }
 
-.drawTable {
-    margin: auto;
-    margin-left: 3%;
+.sandbox {
+    width: 100%;
+    min-height: 60vh;
     border: 2px solid black;
-    padding: 30% 5% 15% 60%;
-    width: 50%;
 }
 
 .box-description {
-    margin: auto;
-    margin-left: 3%;
-    margin-right: 3%;
+    margin-left: 2vh;
+    width: 30%;
+    min-height: 60vh;
     border: 2px solid black;
-    padding: 30% 15% 15% 10%;
-    width: 50%;
 }
 
 * {
