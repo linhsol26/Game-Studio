@@ -13,7 +13,7 @@ for(let i = 0; i < 5; i++) {
 }
 
 for(let i = 0; i < tagTD.length; i++) {
-    tagTD[i].style.border = '1px solid black';
+    tagTD[i].style.border = '1px solid';
     tagTD[i].setAttribute('class', 'hover-each-rect');
 }
 
@@ -25,7 +25,7 @@ btnAddRow.onclick = () => {
         row.insertCell(0);
     }
     for(let i = 0; i < tagTD.length; i++) {
-        tagTD[i].style.border = '1px solid black';
+        tagTD[i].style.border = '1px solid';
         tagTD[i].setAttribute('class', 'hover-each-rect');
     }
 }
@@ -36,7 +36,7 @@ btnAddCol.onclick = () => {
         tagTR[i].insertCell(0);
     }
     for(let i = 0; i < tagTD.length; i++) {
-        tagTD[i].style.border = '1px solid black';
+        tagTD[i].style.border = '1px solid';
         tagTD[i].setAttribute('class', 'hover-each-rect');
     }
 }
