@@ -1,28 +1,25 @@
+.button-row-col {
+    border-radius: 50px;
+    font-size: 10px;
+    padding: 2vh;
+    outline: none;
+    margin: 2vh;
+}
 
 .sandbox {
-    margin: auto;
-    margin-left: -60%;
-    position: absolute;
-    margin-top: -30%;
-    width: 65%;
+    width: 100%;
     min-height: 60vh;
     border-collapse: collapse;
 }
 
 .drawTable {
-    margin: auto;
-    margin-left: 3%;
-    padding: 30% 5% 1% 60%;
-    width: 50%;
+    width: 65%;
     min-height: 60vh;
 }
 
 .box-description {
-    margin: auto;
-    margin-left: 3%;
-    margin-right: 3%;
+    margin-left: 2vh;
     border: 2px solid black;
-    padding: 25% 15% 15% 10%;
     width: 30%;
     min-height: 60vh;
 }
