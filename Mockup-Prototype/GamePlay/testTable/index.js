@@ -50,6 +50,8 @@ const hoverEachEmptyBox = function () {
     }
 }
 
+console.log(sandbox);
+
 btnDeleteRow.onclick = function () {
     tagTR[tagTR.length - 1].parentNode.removeChild(tagTR[tagTR.length - 1]);
 }
@@ -60,5 +62,3 @@ btnDeleteCol.onclick = function () {
     }
     firstTable--;
 }
-
-console.log(sandbox);
