@@ -16,13 +16,4 @@ function drawBoard(rows, colums) {
 
 let btn = document.getElementsByClassName("btn");
 
-function drawCell() {
-    for(let i = 0; i < btn.length; i++){
-        btn[i].style.width = "50px";
-        btn[i].style.height = "50px";
-        btn[i].style.border = "none";
-    }
-}
-
 drawBoard(5, 5);
-drawCell();
