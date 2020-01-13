@@ -15,6 +15,8 @@ const btnAddCol = document.getElementById('btn-add-col');
 const btnDeleteRow = document.getElementById('btn-delete-row');
 const btnDeleteCol = document.getElementById('btn-delete-col');
 
+const radioBtn = document.getElementById('wall');
+
 let firstTable = 10;
 
 
@@ -28,16 +30,21 @@ function setCellId() {
     }
     console.log(tagTR);
 }
-
-for(let i = 0; i < firstTable; i++) {
-    let row = sandbox.insertRow(i);
+   
+window.onload = () => {
     for(let i = 0; i < firstTable; i++) {
-        let emptyBox = row.insertCell(0);
-        emptyBox.className = "cells";
+        let row = sandbox.insertRow(i);
+        for(let i = 0; i < firstTable; i++) {
+            let temp = row.insertCell(0);
+            temp.className = "cells";
+        }
     }
-    
+    createEmptyBox();
+    hoverEachEmptyBox();
+    setCellId();
 }
-setCellId();
+
+
 
 const createEmptyBox = () => {
     for(let i = 0; i < tagTD.length; i++) {
@@ -84,4 +91,11 @@ btnDeleteCol.onclick = () => {
     }
     hoverEachEmptyBox();
     firstTable--;
+}
+
+
+radioBtn.onclick = () => {
+    for (let i = 0; i < tagTD.length; i++) {
+        document.getElementsByClassName("cells")[i].style.cursor = "url(/Share/imagesGame/rungram/Object/Picture1.png) 1 1, auto";
+    } 
 }

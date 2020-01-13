@@ -1,19 +1,41 @@
-.drawTable {
-    width: 65%;
-    min-height: 60vh;
+.cells {
+    cursor: none;
+}
+
+.button-row-col {
+    border-radius: 10px;
+    font-size: 10px;
+    padding: 2vh;
+    outline: none;
+    margin: 2vh;
+    float: left;
+    border: none;
+}
+
+.button-row-col:hover {
+    background-color: grey;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, .4);
+    color: white;
 }
 
 .sandbox {
     width: 100%;
     min-height: 60vh;
-    border: 2px solid black;
+    border-collapse: collapse;
+}
+
+.drawTable {
+    width: 65%;
+    min-height: 60vh;
 }
 
 .box-description {
     margin-left: 2vh;
+    border: 2px solid black;
     width: 30%;
     min-height: 60vh;
     border: 2px solid black;
+    display: inline-block;
 }
 
 * {
