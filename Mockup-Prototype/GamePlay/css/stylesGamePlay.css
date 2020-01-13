@@ -1,3 +1,31 @@
+.sandbox {
+    margin: auto;
+    margin-left: -60%;
+    position: absolute;
+    margin-top: -30%;
+    width: 65.25%;
+    height: 422px;
+    min-height: 100%;
+    border-collapse: collapse;
+}
+
+.drawTable {
+    margin: auto;
+    margin-left: 3%;
+    border: 2px solid black;
+    padding: 30% 5% 15% 60%;
+    width: 50%;
+}
+
+.box-description {
+    margin: auto;
+    margin-left: 3%;
+    margin-right: 3%;
+    border: 2px solid black;
+    padding: 30% 15% 15% 10%;
+    width: 50%;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -141,6 +169,7 @@ div li {
     background: white;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, .4);
     transition: 0.3s;
+    outline: none;
 }
 
 #send-email:hover {
