@@ -15,6 +15,8 @@ const btnAddCol = document.getElementById('btn-add-col');
 const btnDeleteRow = document.getElementById('btn-delete-row');
 const btnDeleteCol = document.getElementById('btn-delete-col');
 
+const radioBtn = document.getElementById('wall');
+
 let firstTable = 10;
 
 window.onload = () => {
@@ -73,4 +75,11 @@ btnDeleteCol.onclick = () => {
     }
     hoverEachEmptyBox();
     firstTable--;
+}
+
+
+radioBtn.onclick = () => {
+    for (let i = 0; i < tagTD.length; i++) {
+        document.getElementsByClassName("cells")[i].style.cursor = "url(/Share/imagesGame/rungram/Object/Picture1.png) 1 1, auto";
+    } 
 }
