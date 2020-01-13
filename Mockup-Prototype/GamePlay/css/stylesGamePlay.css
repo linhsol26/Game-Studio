@@ -5,6 +5,13 @@
     outline: none;
     margin: 2vh;
     float: left;
+    border: none;
+}
+
+.button-row-col:hover {
+    background-color: grey;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, .4);
+    color: white;
 }
 
 .sandbox {
