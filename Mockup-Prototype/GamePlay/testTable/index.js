@@ -23,7 +23,7 @@ const createEmptyBox = () => {
     }
 }
 
-btnAddRow.onclick = () => {
+btnAddRow.onclick = function () {
     let row = sandbox.insertRow(tagTR.length);
     for (let i = 0; i < firstTable; i++) {
         let temp = row.insertCell(0);
@@ -33,7 +33,7 @@ btnAddRow.onclick = () => {
     hoverEachEmptyBox();
 }
 
-btnAddCol.onclick = () => {
+btnAddCol.onclick = function () {
     firstTable++;
     for (let i = 0; i < tagTR.length; i++) {
         let temp = tagTR[i].insertCell(0);
@@ -43,19 +43,19 @@ btnAddCol.onclick = () => {
     hoverEachEmptyBox();
 }
 
-const hoverEachEmptyBox = () => {
+const hoverEachEmptyBox = function () {
     for (let i = 0; i < tagTD.length; i++) {
         tagTD[i].onmouseenter = () => tagTD[i].style.background = 'black';
         tagTD[i].onmouseleave = () => tagTD[i].style.background = 'white';
     }
 }
 
-btnDeleteRow.onclick = () => {
+btnDeleteRow.onclick = function () {
     tagTR[tagTR.length - 1].parentNode.removeChild(tagTR[tagTR.length - 1]);
 }
 
-btnDeleteCol.onclick = () => {
-    for(let i = 0; i < tagTR.length; i++) {
+btnDeleteCol.onclick = function () {
+    for (let i = 0; i < tagTR.length; i++) {
         tagTR[i].removeChild(tagTR[i].children[tagTR[i].children.length - 1]);
     }
     firstTable--;
