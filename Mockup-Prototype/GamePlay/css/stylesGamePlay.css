@@ -3,8 +3,10 @@
     margin-left: -60%;
     position: absolute;
     margin-top: -30%;
-    width: 65%;
+    width: 65.25%;
     height: 422px;
+    min-height: 100%;
+    border-collapse: collapse;
 }
 
 .drawTable {
