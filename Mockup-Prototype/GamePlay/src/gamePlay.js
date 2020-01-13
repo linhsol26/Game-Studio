@@ -20,7 +20,8 @@ let firstTable = 10;
 for(let i = 0; i < firstTable; i++) {
     let row = sandbox.insertRow(i);
     for(let i = 0; i < firstTable; i++) {
-        row.insertCell(0);
+        let temp = row.insertCell(0);
+        temp.className = "cells";
     }
 }
 
@@ -33,7 +34,8 @@ const createEmptyBox = () => {
 btnAddRow.onclick = () => {
     let row = sandbox.insertRow(tagTR.length);
     for(let i = 0; i < firstTable; i++) {
-        row.insertCell(0);
+        let temp = row.insertCell(0);
+        temp.className = "cells";
     }
     createEmptyBox();
     hoverEachEmptyBox();
@@ -42,7 +44,8 @@ btnAddRow.onclick = () => {
 btnAddCol.onclick = () => {
     firstTable++;
     for(let i = 0; i < tagTR.length; i++) {
-        tagTR[i].insertCell(0);
+        let temp = tagTR[i].insertCell(0);
+        temp.className = "cells";
     }
     createEmptyBox();
     hoverEachEmptyBox();
