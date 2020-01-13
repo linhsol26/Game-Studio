@@ -6,8 +6,8 @@ turnOff.onclick = () => {
 }
 
 const sandbox = document.getElementById('sandbox');
-const tagTD = document.getElementsByTagName('td');
-const tagTR = document.getElementsByTagName('tr');
+let tagTD = document.getElementsByTagName('td');
+let tagTR = document.getElementsByTagName('tr');
 
 const btnAddRow = document.getElementById('btn-add-row');
 const btnAddCol = document.getElementById('btn-add-col');
@@ -17,13 +17,27 @@ const btnDeleteCol = document.getElementById('btn-delete-col');
 
 let firstTable = 10;
 
+
+function setCellId() {
+    tagTR = document.getElementsByTagName('tr');
+    tagTD = document.getElementsByTagName('td');
+    for(let i = 0; i < tagTR.length; i++){
+        for(let j = 0; j < tagTR[i].cells.length; j++){
+            tagTR[i].cells[j].id = i + "" + j;
+        }
+    }
+    console.log(tagTR);
+}
+
 for(let i = 0; i < firstTable; i++) {
     let row = sandbox.insertRow(i);
     for(let i = 0; i < firstTable; i++) {
-        let temp = row.insertCell(0);
-        temp.className = "cells";
+        let emptyBox = row.insertCell(0);
+        emptyBox.className = "cells";
     }
+    
 }
+setCellId();
 
 const createEmptyBox = () => {
     for(let i = 0; i < tagTD.length; i++) {
@@ -34,21 +48,23 @@ const createEmptyBox = () => {
 btnAddRow.onclick = () => {
     let row = sandbox.insertRow(tagTR.length);
     for(let i = 0; i < firstTable; i++) {
-        let temp = row.insertCell(0);
-        temp.className = "cells";
+        let emptyBox = row.insertCell(0);
+        emptyBox.className = "cells";
     }
     createEmptyBox();
     hoverEachEmptyBox();
+    setCellId() 
 }
 
 btnAddCol.onclick = () => {
     firstTable++;
     for(let i = 0; i < tagTR.length; i++) {
-        let temp = tagTR[i].insertCell(0);
-        temp.className = "cells";
+        let emptyBox = tagTR[i].insertCell(0);
+        emptyBox.className = "cells";
     }
     createEmptyBox();
     hoverEachEmptyBox();
+    setCellId() 
 }
 
 const hoverEachEmptyBox = () => {
