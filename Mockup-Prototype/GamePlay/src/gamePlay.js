@@ -17,13 +17,18 @@ const btnDeleteCol = document.getElementById('btn-delete-col');
 
 let firstTable = 10;
 
-for(let i = 0; i < firstTable; i++) {
-    let row = sandbox.insertRow(i);
+window.onload = () => {
     for(let i = 0; i < firstTable; i++) {
-        let temp = row.insertCell(0);
-        temp.className = "cells";
+        let row = sandbox.insertRow(i);
+        for(let i = 0; i < firstTable; i++) {
+            let temp = row.insertCell(0);
+            temp.className = "cells";
+        }
     }
+    createEmptyBox();
+    hoverEachEmptyBox();
 }
+
 
 const createEmptyBox = () => {
     for(let i = 0; i < tagTD.length; i++) {

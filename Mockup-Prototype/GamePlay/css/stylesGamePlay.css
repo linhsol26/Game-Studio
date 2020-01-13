@@ -1,3 +1,7 @@
+.cells {
+    cursor: url(/Share/imagesGame/rungram/Object/Picture1.png) 1 1, pointer;
+}
+
 .button-row-col {
     border-radius: 10px;
     font-size: 10px;
