@@ -4,6 +4,9 @@ const tagTR = document.getElementsByTagName('tr');
 const btnAddRow = document.getElementById('btn-add-row');
 const btnAddCol = document.getElementById('btn-add-col');
 
+const btnDeleteRow = document.getElementById('btn-delete-row');
+const btnDeleteCol = document.getElementById('btn-delete-col');
+
 let firstTable = 10;
 
 for (let i = 0; i < firstTable; i++) {
@@ -45,4 +48,15 @@ const hoverEachEmptyBox = () => {
         tagTD[i].onmouseenter = () => tagTD[i].style.background = 'black';
         tagTD[i].onmouseleave = () => tagTD[i].style.background = 'white';
     }
+}
+
+btnDeleteRow.onclick = () => {
+    tagTR[tagTR.length - 1].parentNode.removeChild(tagTR[tagTR.length - 1]);
+}
+
+btnDeleteCol.onclick = () => {
+    for(let i = 0; i < tagTR.length; i++) {
+        tagTR[i].removeChild(tagTR[i].children[tagTR[i].children.length - 1]);
+    }
+    firstTable--;
 }
