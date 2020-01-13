@@ -59,3 +59,10 @@ btnDeleteCol.onclick = () => {
     hoverEachEmptyBox();
     firstTable--;
 }
+
+for(let i = 0; i < tagTD.length; i++) {
+    hoverEachEmptyBox();
+    tagTD[i].onclick = () => {
+        tagTD[i].style.background = 'red';
+    }
+}
