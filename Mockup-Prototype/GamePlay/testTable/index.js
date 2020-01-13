@@ -17,7 +17,7 @@ for (let i = 0; i < firstTable; i++) {
     }
 }
 
-const createEmptyBox = () => {
+const createEmptyBox = function() {
     for (let i = 0; i < tagTD.length; i++) {
         tagTD[i].style.border = '1px solid black';
     }
@@ -60,3 +60,5 @@ btnDeleteCol.onclick = function () {
     }
     firstTable--;
 }
+
+console.log(sandbox);
