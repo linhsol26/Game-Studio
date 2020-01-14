@@ -1,3 +1,10 @@
+.icon-map {
+    padding: 2vh;
+    left: 0;
+    margin-left: 15vh;
+    position: absolute;
+}
+
 .place-canvas {
     border: 2px solid black;
     position: absolute;
@@ -6,17 +13,22 @@
 }
 
 #colorBtn {
-    margin-top: -55vh;
+    /* margin-top: -55vh; */
     border: 1px solid black;
     padding: 3vh;
-    margin-left: 1vh;
+    /* margin-left: 1vh; */
     border-radius: 5px;
     outline: none;
     cursor: pointer;
 }
 
+.gameplay div{
+    flex: 1;
+}
+
 .btn-color-group {
-    display: contents;
+    align-self: baseline;
+    margin-top: 4vh;
 }
 
 .btn-color-group #colorBtn:hover {
