@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Making Game</title>
+    <link rel="stylesheet" href="/Mockup-Prototype/GamePlay/css/styleMakingGame.css">
+    <link href="https://fonts.googleapis.com/css?family=Inconsolata&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/stylesGamePlay.css">
+    <link rel="stylesheet" href="./css/styleMakingGame.css">
+</head>
+<body>
+    <header>
+        <div>
+            <h1 id="title-game">Game Studio</h1>
+            <ul>
+                <li>
+                    <a href="homePage.html" class="header-select">Home</a>
+                </li>
+                <li>
+                    <a href="selectGame.html" class="header-select">Select</a>
+                </li>
+                <li>
+                    <a href="gamePlay.html" class="header-select">Game Play</a>
+                </li>
+                <li>
+                    <button id="login">
+                        <img src="./images/login.png" width="50vh" height="50vh" alt="" >
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <div id="gameplay">
+            <div class="btn-color-group">
+                <button id="colorBtn" style="background-color: red;"></button>
+                <button id="colorBtn" style="background-color: blue;"></button>
+                <button id="colorBtn" style="background-color: black;"></button>
+                <button id="colorBtn" style="background-color: orange;"></button>
+                <button id="colorBtn" style="background-color: green;"></button>
+                <button id="colorBtn" style="background-color: gray;"></button>
+                <button id="colorBtn" style="background-color: pink;"></button>
+                <button id="colorBtn" style="background-color: yellow;"></button>
+                <button id="colorBtn" style="background-color: purple;"></button>
+                <button id="colorBtn" style="background-color: white;"></button>
+                <button id="colorBtn" style="background-color: brown;"></button>
+            </div>
+            <div class="icon-map">
+                <button id="bush"><img id="1" src="./images/Picture1.png" draggable="true" ondragstart="drag(event)"></button>
+            </div>
+            <canvas id="place-canvas" ondrop="drop(event)" ondragover="allowDrop(event)"></canvas>
+        </div>
+        <script src="src/makingGameBox.js"></script>
+    </main>
+</body>
+</html>

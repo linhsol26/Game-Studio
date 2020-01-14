@@ -1,0 +1,41 @@
+.icon-map {
+    padding: 2vh;
+    left: 0;
+    margin-left: 15vh;
+    position: absolute;
+}
+
+#bush:hover {
+    border: 2px solid green;
+}
+
+#place-canvas {
+    border: 2px solid black;
+    position: absolute;
+    height: 50vh;
+    width: 80vh;
+    margin-top: 3vh;
+}
+
+#colorBtn {
+    /* margin-top: -55vh; */
+    border: 1px solid black;
+    padding: 3vh;
+    /* margin-left: 1vh; */
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+}
+
+.gameplay div{
+    flex: 1;
+}
+
+.btn-color-group {
+    align-self: baseline;
+    margin-top: 4vh;
+}
+
+.btn-color-group #colorBtn:hover {
+    border: 3px solid orange;
+}
