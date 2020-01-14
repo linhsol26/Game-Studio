@@ -28,7 +28,6 @@ function setCellId() {
             tagTR[i].cells[j].id = i + "" + j;
         }
     }
-    console.log(tagTR);
 }
    
 window.onload = () => {
@@ -95,7 +94,7 @@ btnDeleteCol.onclick = () => {
 
 radioBtn.onclick = () => {
     for (let i = 0; i < tagTD.length; i++) {
-        document.getElementsByClassName("cells")[i].style.cursor = "url(/Share/imagesGame/rungram/Object/Picture1.png) 1 1, auto";
+        document.getElementsByClassName("cells")[i].style.cursor = "url(/Game-Studio/Mockup-Prototype/GamePlay/images/Picture1.png) 1 1, auto";
     }
     hoverEachEmptyBox();
 }
