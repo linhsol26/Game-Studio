@@ -26,7 +26,7 @@
                 </li>
                 <li>
                     <button id="login">
-                        <img src="./images/login.png" width="50vh" height="50vh" alt="">
+                        <img src="./images/login.png" width="50vh" height="50vh" alt="" >
                     </button>
                 </li>
             </ul>
@@ -49,11 +49,11 @@
                 <button id="colorBtn" style="background-color: brown;"></button>
             </div>
             <div class="icon-map">
-                <button id="bush"><img src="./images/Picture1.png"></button>
+                <button id="bush"><img id="1" src="./images/Picture1.png" draggable="true" ondragstart="drag(event)"></button>
             </div>
-            <canvas class="place-canvas">
-            </canvas>
+            <canvas id="place-canvas" ondrop="drop(event)" ondragover="allowDrop(event)"></canvas>
         </div>
+        <script src="src/makingGameBox.js"></script>
     </main>
 </body>
 </html>
