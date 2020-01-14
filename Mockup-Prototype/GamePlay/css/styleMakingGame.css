@@ -1,7 +1,14 @@
+.place-canvas {
+    border: 2px solid black;
+    position: absolute;
+    padding: 20vh 40vh 25vh 40vh;
+    margin-top: 3vh;
+}
+
 #colorBtn {
+    margin-top: -55vh;
     border: 1px solid black;
     padding: 3vh;
-    margin-bottom: 55vh;
     margin-left: 1vh;
     border-radius: 5px;
     outline: none;
@@ -9,8 +16,7 @@
 }
 
 .btn-color-group {
-    margin-top: 1vh;
-    margin-right: 50vh;
+    display: contents;
 }
 
 .btn-color-group #colorBtn:hover {
