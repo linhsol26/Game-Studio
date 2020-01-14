@@ -36,30 +36,26 @@
 
     <main>
         <div id="draw-table">
-            <canvas id="canvas" width="500" height="500" style="border:2px solid black"></canvas>
+            <canvas id="canvas" width="500" height="500" style="border:2px solid black;" ondrop = drop(event)
+                ondragover= allowDrop(event)></canvas>
 
             <div class="box-description">
-                <button id="drawing-mode" class="btn btn-info">Cancel drawing mode</button><br>
-                <button id="clear-canvas" class="btn btn-info">Clear</button><br>
-                <button id="save-canvas" class="btn btn-info">Save</button>
-
-                <div class="btn-color-group">
-                    <button id="btn-color" style="background-color: red;"></button>
-                    <button id="btn-color" style="background-color: blue;"></button>
-                    <button id="btn-color" style="background-color: black;"></button>
-                    <button id="btn-color" style="background-color: orange;"></button>
-                    <button id="btn-color" style="background-color: green;"></button>
-                    <button id="btn-color" style="background-color: gray;"></button>
-                    <button id="btn-color" style="background-color: pink;"></button>
-                    <button id="btn-color" style="background-color: yellow;"></button>
-                    <button id="btn-color" style="background-color: purple;"></button>
-                    <button id="btn-color" style="background-color: white;"></button>
-                    <button id="btn-color" style="background-color: brown;"></button>
+                <div>
+                    <button id="drawing-mode" class="btn btn-info">Cancel drawing mode</button>
+                    <button id="clear-canvas" class="btn btn-info">Clear</button>
+                    <button id="save-canvas" class="btn btn-info">Save</button>
                 </div>
-
+                <div class="icon-map">
+                    <img id="stone" class="drag-drop-image" src="./images/rock.png" draggable="true" ondragstart = drag(event)>
+                    <img id="bush" class="drag-drop-image" src="./images/bush.png" draggable="true" ondragstart = drag(event)>
+                    <img id="mushroomoPink" class="drag-drop-image" src="./images/mushroomPink.png" draggable="true" ondragstart = drag(event)>
+                    <img id="mushroomOrange" class="drag-drop-image" src="./images/mushroomOrange.png" draggable="true" ondragstart = drag(event)>
+                    <img id="rootTree" class="drag-drop-image" src="./images/tree.png" draggable="true" ondragstart = drag(event)>
+                    <img id="tree" class="drag-drop-image" src="./images/tree1.png" draggable="true" ondragstart = drag(event)>
+                </div>
                 <div id="drawing-mode-options">
                     <label for="drawing-mode-selector">Mode:</label>
-                    <select id="drawing-mode-selector">
+                    <select id="drawing-mode-selector" class="change-type">
                         <option>Pencil</option>
                         <option>Circle</option>
                         <option>Spray</option>
@@ -72,25 +68,20 @@
                     </select><br>
 
                     <label for="drawing-line-width">Line width:</label>
-                    <span class="info">1</span><input type="range" value="1" min="0" max="150"
-                        id="drawing-line-width"><br>
+                    <input type="number" value="1" min="0" max="150" id="drawing-line-width" class="change-type"><br>
 
                     <label for="drawing-color">Line color:</label>
-                    <input type="color" value="#000000" id="drawing-color"><br>
+                    <input type="color" value="#000000" id="drawing-color" class="change-type"><br>
 
                     <label for="drawing-shadow-color">Shadow color:</label>
-                    <input type="color" value="#000000" id="drawing-shadow-color"><br>
+                    <input type="color" value="#000000" id="drawing-shadow-color" class="change-type"><br>
 
                     <label for="drawing-shadow-width">Shadow width:</label>
-                    <span class="info">0</span><input type="range" value="0" min="0" max="50"
-                        id="drawing-shadow-width"><br>
+                    <input type="number" value="0" min="0" max="50" id="drawing-shadow-width" class="change-type"><br>
 
                     <label for="drawing-shadow-offset">Shadow offset:</label>
-                    <span class="info">0</span><input type="range" value="0" min="0" max="50"
-                        id="drawing-shadow-offset"><br>
+                    <input type="number" value="0" min="0" max="50" id="drawing-shadow-offset" class="change-type"><br>
                 </div>
-                <br>
-                <br>
             </div>
         </div>
     </main>
