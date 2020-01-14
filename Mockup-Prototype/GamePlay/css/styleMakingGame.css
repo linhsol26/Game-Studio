@@ -1,21 +1,23 @@
 .icon-map {
     padding: 2vh;
     left: 0;
-    margin-left: 15vh;
-    position: absolute;
+    margin-left: 6vh;
+    position: fixed;
+    display: grid;
 }
 
-#bush #stone{
+#bush #stone #mushroomPink #mushroomOrange{
     position: fixed;
     left: 0;
     display: block;
+    white-space: normal;
 }
 
-#stone #bush:hover {
+#mushroomOrange #mushroomPink #stone #bush:hover {
     border: 2px solid green;
 }
 
-.place-canvas {
+#place-canvas {
     border: 2px solid black;
     position: absolute;
     height: 50vh;
