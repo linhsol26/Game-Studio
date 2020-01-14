@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Game Studio</title>
+    <link href="https://fonts.googleapis.com/css?family=Inconsolata&display=swap" rel="stylesheet">
+    <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/fabric.js/3.5.0/fabric.min.js'></script>
+    <link rel="stylesheet" href="./stylesGamePlay.css">
+</head>
+
+<body>
+    <header>
+        <div>
+            <h1 id="title-game">Game Studio</h1>
+            <ul>
+                <li>
+                    <a href="homePage.html" class="header-select">Home</a>
+                </li>
+                <li>
+                    <a href="selectGame.html" class="header-select">Select</a>
+                </li>
+                <li>
+                    <a href="gamePlay.html" class="header-select">Game Play</a>
+                </li>
+                <li>
+                    <button id="login">
+                        Login
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <div id="draw-table">
+            <canvas id="canvas" width="500" height="500" style="border:2px solid black"></canvas>
+
+            <div class="box-description">
+                <button id="drawing-mode" class="btn btn-info">Cancel drawing mode</button><br>
+                <button id="clear-canvas" class="btn btn-info">Clear</button><br>
+                <button id="save-canvas" class="btn btn-info">Save</button>
+
+                <div class="btn-color-group">
+                    <button id="btn-color" style="background-color: red;"></button>
+                    <button id="btn-color" style="background-color: blue;"></button>
+                    <button id="btn-color" style="background-color: black;"></button>
+                    <button id="btn-color" style="background-color: orange;"></button>
+                    <button id="btn-color" style="background-color: green;"></button>
+                    <button id="btn-color" style="background-color: gray;"></button>
+                    <button id="btn-color" style="background-color: pink;"></button>
+                    <button id="btn-color" style="background-color: yellow;"></button>
+                    <button id="btn-color" style="background-color: purple;"></button>
+                    <button id="btn-color" style="background-color: white;"></button>
+                    <button id="btn-color" style="background-color: brown;"></button>
+                </div>
+
+                <div id="drawing-mode-options">
+                    <label for="drawing-mode-selector">Mode:</label>
+                    <select id="drawing-mode-selector">
+                        <option>Pencil</option>
+                        <option>Circle</option>
+                        <option>Spray</option>
+                        <option>Pattern</option>
+                        <option>hline</option>
+                        <option>vline</option>
+                        <option>square</option>
+                        <option>diamond</option>
+                        <option>texture</option>
+                    </select><br>
+
+                    <label for="drawing-line-width">Line width:</label>
+                    <span class="info">1</span><input type="range" value="1" min="0" max="150"
+                        id="drawing-line-width"><br>
+
+                    <label for="drawing-color">Line color:</label>
+                    <input type="color" value="#000000" id="drawing-color"><br>
+
+                    <label for="drawing-shadow-color">Shadow color:</label>
+                    <input type="color" value="#000000" id="drawing-shadow-color"><br>
+
+                    <label for="drawing-shadow-width">Shadow width:</label>
+                    <span class="info">0</span><input type="range" value="0" min="0" max="50"
+                        id="drawing-shadow-width"><br>
+
+                    <label for="drawing-shadow-offset">Shadow offset:</label>
+                    <span class="info">0</span><input type="range" value="0" min="0" max="50"
+                        id="drawing-shadow-offset"><br>
+                </div>
+                <br>
+                <br>
+            </div>
+        </div>
+    </main>
+    <script src="./gamePlay.js"></script>
+</body>
+
+</html>
