@@ -21,9 +21,9 @@ function drag(ev) {
 function drop(ev) {
     let pos = getMousePos(myCanvas, ev);
     ev.preventDefault();
-    var data = ev.dataTransfer.getData("text");
-    console.log(pos);
-    ctx.drawImage(document.getElementById(data), pos.x, pos.y, 25, 25);
+    let data = ev.dataTransfer.getData("text");
+    let image = document.getElementById(data);
+    ctx.drawImage(document.getElementById(data), pos.x, pos.y);
 }
 
 
