@@ -10,7 +10,6 @@
     position: fixed;
     left: 0;
     display: block;
-    white-space: normal;
 }
 
 #mushroomOrange #mushroomPink #stone #bush:hover {
