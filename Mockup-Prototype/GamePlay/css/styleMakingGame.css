@@ -5,7 +5,13 @@
     position: absolute;
 }
 
-#bush:hover {
+#bush #stone{
+    position: fixed;
+    left: 0;
+    display: block;
+}
+
+#stone #bush:hover {
     border: 2px solid green;
 }
 
