@@ -1,18 +1,18 @@
 .icon-map {
     padding: 2vh;
     left: 0;
-    margin-left: 6vh;
+    margin-left: 8vh;
     position: fixed;
     display: grid;
 }
 
-#bush #stone #mushroomPink #mushroomOrange{
+#bush #stone #mushroomPink #mushroomOrange #tree{
     position: fixed;
     left: 0;
     display: block;
 }
 
-#mushroomOrange #mushroomPink #stone #bush:hover {
+#tree #mushroomOrange #mushroomPink #stone #bush:hover {
     border: 2px solid green;
 }
 
