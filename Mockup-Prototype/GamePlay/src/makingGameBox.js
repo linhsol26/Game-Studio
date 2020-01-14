@@ -23,7 +23,6 @@ function drop(ev) {
     ev.preventDefault();
     let data = ev.dataTransfer.getData("text");
     let image = document.getElementById(data);
-    console.log(image);
     ctx.drawImage(document.getElementById(data), pos.x, pos.y);
 }
 
