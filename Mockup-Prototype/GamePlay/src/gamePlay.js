@@ -28,7 +28,6 @@ function setCellId() {
             tagTR[i].cells[j].id = i + "" + j;
         }
     }
-    console.log(tagTR);
 }
    
 window.onload = () => {
