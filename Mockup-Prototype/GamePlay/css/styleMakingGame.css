@@ -66,6 +66,10 @@ main {
     min-height: 3vw;
 }
 
+#canvas {
+    background: black;
+}
+
 .icon-map {
     margin-top: 1vh;
     display: flex;
