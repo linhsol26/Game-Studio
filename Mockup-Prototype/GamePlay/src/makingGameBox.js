@@ -213,3 +213,7 @@ let drop = function(event) {
     let image = document.getElementById(data);
     ctx.drawImage(image, pos.x, pos.y);
 }
+
+let changeBGColor = function(evt) {
+    myCanvas.style.background = evt.toElement.style.backgroundColor;
+}
