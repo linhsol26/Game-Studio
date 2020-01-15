@@ -190,27 +190,31 @@
 let myCanvas = document.getElementById('canvas');
 let ctx = myCanvas.getContext('2d');
 
-let getMousePos = function(canvas, event) {
+let getMousePos = function (canvas, event) {
     var rect = canvas.getBoundingClientRect();
     return {
-      x: event.clientX - rect.left,
-      y: event.clientY - rect.top
+        x: event.clientX - rect.left,
+        y: event.clientY - rect.top
     };
 }
 
-let allowDrop = function(event) {
+let allowDrop = function (event) {
     event.preventDefault();
 }
 
-let drag = function(event) {
+let drag = function (event) {
     event.dataTransfer.setData('text', event.target.id);
     console.log(event.target.id);
 }
 
-let drop = function(event) {
+let drop = function (event) {
     let pos = getMousePos(myCanvas, event);
     event.preventDefault();
     let data = event.dataTransfer.getData('text');
     let image = document.getElementById(data);
     ctx.drawImage(image, pos.x, pos.y);
+}
+
+let changeBGColor = function (evt) {
+    myCanvas.style.background = evt.toElement.style.backgroundColor;
 }
