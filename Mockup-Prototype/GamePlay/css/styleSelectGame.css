@@ -6,7 +6,10 @@
 
 body {
     font-family: 'Inconsolata', monospace;
-    background: linear-gradient(to right, #dce35b, #45b649);
+}
+
+main {
+    opacity: .5;
 }
 
 header {
@@ -84,6 +87,7 @@ div li {
     border: 3px solid black;
     border-radius: 8px;
     margin-right: 3px;
+    min-height: 65vh;
 }
 
 .description {
