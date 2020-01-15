@@ -36,36 +36,6 @@
     </header>
 
     <main>
-        <div id="gameplay" style="display: none;">
-            <div class="btn-color-group">
-                <button id="colorBtn" style="background-color: red;"></button>
-                <button id="colorBtn" style="background-color: blue;"></button>
-                <button id="colorBtn" style="background-color: black;"></button>
-                <button id="colorBtn" style="background-color: orange;"></button>
-                <button id="colorBtn" style="background-color: green;"></button>
-                <button id="colorBtn" style="background-color: gray;"></button>
-                <button id="colorBtn" style="background-color: pink;"></button>
-                <button id="colorBtn" style="background-color: yellow;"></button>
-                <button id="colorBtn" style="background-color: purple;"></button>
-                <button id="colorBtn" style="background-color: white;"></button>
-                <button id="colorBtn" style="background-color: brown;"></button>
-            </div>
-            <div class="icon-map">
-                <button id="stone" style="margin-bottom: 1vh"><img id="1" src="images/rock.png" draggable="true" ondragstart="drag(event)"></button>
-                <button id="bush" style="margin-bottom: 1vh"><img id="2" src="images/bush.png" draggable="true" ondragstart="drag(event)"></button>
-                <button id="mushroomoPink" style="margin-bottom: 1vh"><img id="3" src="images/mushroomPink.png" draggable="true" ondragstart="drag(event)"></button>
-                <button id="mushroomOrange" style="margin-bottom: 1vh"><img id="4" src="images/mushroomOrange.png" draggable="true" ondragstart="drag(event)"></button>
-                <button id="tree" style="margin-bottom: 1vh"><img id="5" src="images/tree.png" draggable="true" ondragstart="drag(event)"></button>
-                <button id="tree1" style="margin-bottom: 1vh"><img id="6" src="images/tree1.png" draggable="true" ondragstart="drag(event)"></button>
-            </div>
-            <canvas style="background-color: black;"id="place-canvas" ondrop="drop(event)" ondragover="allowDrop(event)"></canvas>
-        </div>
-        <div id="draw-table" style="display: flex;">
-            <div class="box-description">
-
-            </div>
-            <canvas id="canvas" width="700" height="700" style="border:2px solid black;"></canvas>
-
             <div class="box-description">
                 <div>
                     <button id="drawing-mode" class="btn btn-info">Cancel drawing mode</button>
@@ -101,6 +71,34 @@
                     <label for="drawing-shadow-offset">Shadow offset:</label>
                     <input type="number" value="0" min="0" max="50" id="drawing-shadow-offset" class="change-type"><br>
                 </div>
+
+                <div class="icon-map">
+                    <img id="stone" class="drag-drop-image" src="./images/rock.png" draggable="true"
+                        ondragstart=drag(event)>
+                    <img id="bush" class="drag-drop-image" src="./images/bush.png" draggable="true"
+                        ondragstart=drag(event)>
+                    <img id="mushroomoPink" class="drag-drop-image" src="./images/mushroomPink.png" draggable="true"
+                        ondragstart=drag(event)>
+                    <img id="mushroomOrange" class="drag-drop-image" src="./images/mushroomOrange.png" draggable="true"
+                        ondragstart=drag(event)>
+                    <img id="rootTree" class="drag-drop-image" src="./images/tree.png" draggable="true"
+                        ondragstart=drag(event)>
+                    <img id="tree" class="drag-drop-image" src="./images/tree1.png" draggable="true"
+                        ondragstart=drag(event)>
+                </div>
+
+                <div id="background-canvas">
+                    <button class="background-canvas-color" style="background: red;" onclick="changeBGColor(event)"></button>
+                    <button class="background-canvas-color" style="background: black;" onclick="changeBGColor(event)"></button>
+                    <button class="background-canvas-color" style="background: blue;" onclick="changeBGColor(event)"></button>
+                    <button class="background-canvas-color" style="background: green;" onclick="changeBGColor(event)"></button>
+                    <button class="background-canvas-color" style="background: brown;" onclick="changeBGColor(event)"></button>
+                    <button class="background-canvas-color" style="background: purple;" onclick="changeBGColor(event)"></button>
+                    <button class="background-canvas-color" style="background: yellow;" onclick="changeBGColor(event)"></button>
+                    <button class="background-canvas-color" style="background: white;" onclick="changeBGColor(event)"></button>
+                </div>
+
+
             </div>
         </div>
         <script src="src/makingGameBox.js"></script>

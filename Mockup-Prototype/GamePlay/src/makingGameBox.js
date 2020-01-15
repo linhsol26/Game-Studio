@@ -180,7 +180,8 @@
     //Save canvas to base64 in localstorage
     let saveCanvas = $('save-canvas');
     saveCanvas.onclick = () => {
-        let save = canvas.toDataURL();
+        let save = canvas.toDataURL("image/png");
+        document.write('<img src="'+save+'"/>');
         localStorage.setItem('Canvas', JSON.stringify(save));
     }
 })();
@@ -189,27 +190,31 @@
 var myCanvas = document.getElementById("place-canvas");
 var ctx = myCanvas.getContext("2d");
 
-
-function getMousePos(canvas, evt) {
+let getMousePos = function (canvas, event) {
     var rect = canvas.getBoundingClientRect();
     return {
-        x: evt.clientX - rect.left,
-        y: evt.clientY - rect.top
+        x: event.clientX - rect.left,
+        y: event.clientY - rect.top
     };
 }
 
-function allowDrop(ev) {
-    ev.preventDefault();
+let allowDrop = function (event) {
+    event.preventDefault();
 }
 
-function drag(ev) {
-    ev.dataTransfer.setData("text", ev.target.id);
+let drag = function (event) {
+    event.dataTransfer.setData('text', event.target.id);
+    console.log(event.target.id);
 }
 
-function drop(ev) {
-    let pos = getMousePos(myCanvas, ev);
-    ev.preventDefault();
-    let data = ev.dataTransfer.getData("text");
+let drop = function (event) {
+    let pos = getMousePos(myCanvas, event);
+    event.preventDefault();
+    let data = event.dataTransfer.getData('text');
     let image = document.getElementById(data);
-    ctx.drawImage(document.getElementById(data), pos.x, pos.y);
+    ctx.drawImage(image, pos.x, pos.y);
+}
+
+let changeBGColor = function (evt) {
+    myCanvas.style.background = evt.toElement.style.backgroundColor;
 }
