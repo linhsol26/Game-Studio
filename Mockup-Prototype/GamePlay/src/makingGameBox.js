@@ -186,9 +186,9 @@
     }
 })();
 
-//Event drag drop empty
-let myCanvas = document.getElementById('canvas');
-let ctx = myCanvas.getContext('2d');
+//-------------------------------------------------------------------------
+var myCanvas = document.getElementById("place-canvas");
+var ctx = myCanvas.getContext("2d");
 
 let getMousePos = function (canvas, event) {
     var rect = canvas.getBoundingClientRect();
