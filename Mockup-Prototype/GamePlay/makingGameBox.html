@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Making Game</title>
-    <link rel="stylesheet" href="/Mockup-Prototype/GamePlay/css/styleMakingGame.css">
+    <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/fabric.js/3.5.0/fabric.min.js'></script>
     <link href="https://fonts.googleapis.com/css?family=Inconsolata&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/stylesGamePlay.css">
     <link rel="stylesheet" href="./css/styleMakingGame.css">
@@ -34,7 +34,7 @@
     </header>
 
     <main>
-        <div id="gameplay">
+        <div id="gameplay" style="display: none;">
             <div class="btn-color-group">
                 <button id="colorBtn" style="background-color: red;"></button>
                 <button id="colorBtn" style="background-color: blue;"></button>
@@ -57,6 +57,49 @@
                 <button id="tree1" style="margin-bottom: 1vh"><img id="6" src="images/tree1.png" draggable="true" ondragstart="drag(event)"></button>
             </div>
             <canvas style="background-color: black;"id="place-canvas" ondrop="drop(event)" ondragover="allowDrop(event)"></canvas>
+        </div>
+        <div id="draw-table" style="display: flex;">
+            <div class="box-description">
+
+            </div>
+            <canvas id="canvas" width="700" height="700" style="border:2px solid black;"></canvas>
+
+            <div class="box-description">
+                <div>
+                    <button id="drawing-mode" class="btn btn-info">Cancel drawing mode</button>
+                    <button id="clear-canvas" class="btn btn-info">Clear</button>
+                    <button id="save-canvas" class="btn btn-info">Save</button>
+                </div>
+                <div id="drawing-mode-options">
+                    <label for="drawing-mode-selector">Mode:</label>
+                    <select id="drawing-mode-selector" class="change-type">
+                        <option>Pencil</option>
+                        <option>Circle</option>
+                        <option>Spray</option>
+                        <option>Pattern</option>
+                        <option>hline</option>
+                        <option>vline</option>
+                        <option>square</option>
+                        <option>diamond</option>
+                        <option>texture</option>
+                    </select><br>
+
+                    <label for="drawing-line-width">Line width:</label>
+                    <input type="number" value="1" min="0" max="150" id="drawing-line-width" class="change-type"><br>
+
+                    <label for="drawing-color">Line color:</label>
+                    <input type="color" value="#000000" id="drawing-color" class="change-type"><br>
+
+                    <label for="drawing-shadow-color">Shadow color:</label>
+                    <input type="color" value="#000000" id="drawing-shadow-color" class="change-type"><br>
+
+                    <label for="drawing-shadow-width">Shadow width:</label>
+                    <input type="number" value="0" min="0" max="50" id="drawing-shadow-width" class="change-type"><br>
+
+                    <label for="drawing-shadow-offset">Shadow offset:</label>
+                    <input type="number" value="0" min="0" max="50" id="drawing-shadow-offset" class="change-type"><br>
+                </div>
+            </div>
         </div>
         <script src="src/makingGameBox.js"></script>
     </main>

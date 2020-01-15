@@ -46,3 +46,140 @@
 .btn-color-group #colorBtn:hover {
     border: 3px solid orange;
 }
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inconsolata', monospace;
+    background: linear-gradient(to right, #dce35b, #45b649);
+}
+
+header {
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, .4);
+    position: sticky;
+    top: 0px;
+    background: white;
+}
+
+header div {
+    min-height: 10vh;
+    margin: auto;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+div h1,
+div ul {
+    font-size: 1.5rem;
+    flex: 1;
+}
+
+div ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+div li {
+    color: black;
+    text-decoration: none;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.change-type {
+    margin-top: 1vh;
+    text-align: center;
+    width: 3vw;
+    min-height: 3vh;
+    border: 1px solid black;
+    border-radius: .5vh;
+    font-family: 'Inconsolata', monospace;
+}
+
+#draw-table {
+    margin-top: 2vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    width: 90%;
+    padding: 2vh;
+    border: 2px solid black;
+    border-radius: 5vh;
+}
+
+#drawing-mode {
+    vertical-align: top;
+}
+
+#drawing-mode-options {
+    margin-left: 1vh;
+    margin-top: 1vh;
+    display: inline-block;
+    vertical-align: top;
+    background: #f5f2f0;
+    padding: 1vw;
+    border: 2px solid black;
+}
+
+label {
+    display: inline-block;
+    width: 130px;
+}
+
+.btn-info {
+    margin-left: 1vh;
+    margin-top: 1vh;
+    font-family: 'Inconsolata', monospace;
+}
+
+#bd-wrapper {
+    min-width: 1500px;
+}
+
+.box-description {
+    margin: 1vh;
+    border: 2px solid black;
+    width: 20%;
+    min-height: 80vh;
+    display: flex;
+    align-items: flex-start;
+    flex-flow: row wrap;
+}
+
+#login,
+.header-select,
+.btn-info {
+    background-color: white;
+    padding: 8px;
+    border: 0px solid white;
+    border-radius: 8px;
+    text-decoration: none;
+    outline: none;
+    color: black;
+    cursor: pointer;
+    font-family: 'Inconsolata', monospace;
+    font-size: 1.5rem;
+    transition: 0.4s;
+}
+
+#login:hover,
+.header-select:hover,
+.btn-info:hover {
+    background: linear-gradient(to right, #1d976c, #93f9b9);
+    box-shadow: 0px 4px 8px 0px;
+    color: white;
+    transition: 0.4s;
+}
