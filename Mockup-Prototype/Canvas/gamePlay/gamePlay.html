@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Game Studio</title>
+    <link href="https://fonts.googleapis.com/css?family=Inconsolata&display=swap" rel="stylesheet">
+    <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/fabric.js/3.5.0/fabric.min.js'></script>
+    <link rel="stylesheet" href="./stylesGamePlay.css">
+</head>
+
+<body>
+    <header>
+        <div>
+            <h1 id="title-game">Game Studio</h1>
+            <ul>
+                <li>
+                    <a href="homePage.html" class="header-select">Home</a>
+                </li>
+                <li>
+                    <a href="selectGame.html" class="header-select">Select</a>
+                </li>
+                <li>
+                    <a href="gamePlay.html" class="header-select">Game Play</a>
+                </li>
+                <li>
+                    <button id="login">
+                        Login
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <div id="draw-table">
+            <canvas id="canvas" width="500" height="500" style="border:2px solid black;" ondrop = drop(event)
+                ondragover= allowDrop(event)></canvas>
+
+            <div class="box-description">
+                <div>
+                    <button id="drawing-mode" class="btn btn-info">Cancel drawing mode</button>
+                    <button id="clear-canvas" class="btn btn-info">Clear</button>
+                    <button id="save-canvas" class="btn btn-info">Save</button>
+                </div>
+                <div class="icon-map">
+                    <img id="stone" class="drag-drop-image" src="./images/rock.png" draggable="true" ondragstart = drag(event)>
+                    <img id="bush" class="drag-drop-image" src="./images/bush.png" draggable="true" ondragstart = drag(event)>
+                    <img id="mushroomoPink" class="drag-drop-image" src="./images/mushroomPink.png" draggable="true" ondragstart = drag(event)>
+                    <img id="mushroomOrange" class="drag-drop-image" src="./images/mushroomOrange.png" draggable="true" ondragstart = drag(event)>
+                    <img id="rootTree" class="drag-drop-image" src="./images/tree.png" draggable="true" ondragstart = drag(event)>
+                    <img id="tree" class="drag-drop-image" src="./images/tree1.png" draggable="true" ondragstart = drag(event)>
+                </div>
+                <div id="drawing-mode-options">
+                    <label for="drawing-mode-selector">Mode:</label>
+                    <select id="drawing-mode-selector" class="change-type">
+                        <option>Pencil</option>
+                        <option>Circle</option>
+                        <option>Spray</option>
+                        <option>Pattern</option>
+                        <option>hline</option>
+                        <option>vline</option>
+                        <option>square</option>
+                        <option>diamond</option>
+                        <option>texture</option>
+                    </select><br>
+
+                    <label for="drawing-line-width">Line width:</label>
+                    <input type="number" value="1" min="0" max="150" id="drawing-line-width" class="change-type"><br>
+
+                    <label for="drawing-color">Line color:</label>
+                    <input type="color" value="#000000" id="drawing-color" class="change-type"><br>
+
+                    <label for="drawing-shadow-color">Shadow color:</label>
+                    <input type="color" value="#000000" id="drawing-shadow-color" class="change-type"><br>
+
+                    <label for="drawing-shadow-width">Shadow width:</label>
+                    <input type="number" value="0" min="0" max="50" id="drawing-shadow-width" class="change-type"><br>
+
+                    <label for="drawing-shadow-offset">Shadow offset:</label>
+                    <input type="number" value="0" min="0" max="50" id="drawing-shadow-offset" class="change-type"><br>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="./gamePlay.js"></script>
+</body>
+
+</html>
