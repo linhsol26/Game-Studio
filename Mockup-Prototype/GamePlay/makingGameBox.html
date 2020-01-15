@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/fabric.js/3.5.0/fabric.min.js'></script>
     <title>Game Studio</title>
     <link href="https://fonts.googleapis.com/css?family=Inconsolata&display=swap" rel="stylesheet">
     <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/fabric.js/3.5.0/fabric.min.js'></script>
@@ -35,10 +36,6 @@
     </header>
 
     <main>
-        <div id="draw-table">
-            <canvas id="canvas" width="500" height="500" style="border:2px solid black;" ondrop=drop(event)
-                ondragover=allowDrop(event)></canvas>
-
             <div class="box-description">
                 <div>
                     <button id="drawing-mode" class="btn btn-info">Cancel drawing mode</button>
@@ -104,8 +101,8 @@
 
             </div>
         </div>
+        <script src="src/makingGameBox.js"></script>
     </main>
-    <script src="./src/makingGameBox.js"></script>
 </body>
 
 </html>

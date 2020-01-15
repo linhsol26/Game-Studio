@@ -156,6 +156,12 @@ div li {
     box-shadow: 0px 8px 8px 0px rgba(0, 0, 0, .8);
 }
 
+#draw-table {
+    background: linear-gradient(to right, #c9d6ff, #e2e2e2);
+    animation: focus-in-expand-fwd 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    box-shadow: 0px 8px 8px 0px rgba(0, 0, 0, .8);
+}
+
 #game-description {
     border: 3px solid black;
     width: 95%;
