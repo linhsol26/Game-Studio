@@ -181,7 +181,7 @@
     let saveCanvas = $('save-canvas');
     saveCanvas.onclick = () => {
         let save = canvas.toDataURL("image/png");
-        document.write('<img src="'+save+'"/>');
+        document.write('<img src="' + save + '"/>');
         localStorage.setItem('Canvas', JSON.stringify(save));
     }
 })();
@@ -217,4 +217,19 @@ let drop = function (event) {
 
 let changeBGColor = function (evt) {
     myCanvas.style.background = evt.toElement.style.backgroundColor;
+}
+
+//-------
+let changeOption = document.getElementById('change-canvas');
+
+changeOption.onclick = function() {
+    document.getElementById('draw-map-table').style.display = 'flex';
+    document.getElementById('draw-player-table').style.display = 'none';
+}
+
+let changeOption2 = document.getElementById('change-canvas-2');
+
+changeOption2.onclick = function() {
+    document.getElementById('draw-map-table').style.display = 'none';
+    document.getElementById('draw-player-table').style.display = 'flex';
 }

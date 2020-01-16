@@ -87,8 +87,7 @@ btnDeleteCol.onclick = () => {
 }
 
 btnRadio.onclick = () => {
-    console.log(idEmptyBox);
-    // for (let i = 0; i < tagTD.length; i++) {
-    //     idEmptyBox[i].style.cursor = "url(/images/Picture1.png) 1 1, auto";
-    // }
+    for (let i = 0; i < tagTD.length; i++) {
+        idEmptyBox[i].style.cursor = "url(/images/Picture1.png) 1 1, auto";
+    }
 }
