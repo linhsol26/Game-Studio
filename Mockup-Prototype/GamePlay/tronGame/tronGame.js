@@ -1,6 +1,6 @@
 const canvas = document.getElementById('tron');
 const context = canvas.getContext('2d');
-const unit = 15;
+const unit = 10;
 
 class Player {
     constructor(x, y, color) {
