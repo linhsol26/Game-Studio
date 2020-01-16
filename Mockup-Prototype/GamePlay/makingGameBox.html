@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css?family=Inconsolata&display=swap" rel="stylesheet">
     <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/fabric.js/3.5.0/fabric.min.js'></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
     <link rel="stylesheet" href="./css/styleMakingGame.css">
     <link rel="stylesheet" href="./css/stylesBackground.css">
 </head>
@@ -2071,7 +2072,7 @@
             <circle fill="#FFFFFF" cx="132.07" cy="31.76" r="1.49" />
             <path fill="#FFFFFF"
                 d="M164.03 60.77c-2.1 0-4.07 0.53-5.79 1.45 -2.83-4.55-7.86-7.59-13.62-7.59 -3.69 0-7.09 1.26-9.8 3.36 -2.48-3.91-6.35-6.82-10.93-8.06 -0.25-1.4-0.64-2.75-1.18-4.03 0.72-1.13 1.15-2.47 1.15-3.91 0-4.02-3.26-7.27-7.27-7.27 -1.33 0-2.57 0.36-3.65 0.99 -2.53-1.19-5.34-1.87-8.33-1.87 -6.98 0-13.09 3.66-16.57 9.15 -4.23-3.29-9.54-5.25-15.32-5.25 -10.36 0-19.25 6.31-23.04 15.3 -0.64-0.07-1.29-0.1-1.95-0.1 -6.14 0-11.58 2.97-14.99 7.54 -1.54-0.7-3.25-1.1-5.05-1.1 -6.78 0-12.28 5.5-12.28 12.28s5.5 12.28 12.28 12.28c1.8 0 3.51-0.4 5.05-1.1 3.41 4.57 8.85 7.54 14.99 7.54 5.21 0 9.92-2.13 13.31-5.56 3.49 1.85 7.46 2.9 11.68 2.9 0.41 0 0.81-0.01 1.22-0.03 4.29 7.59 12.43 12.71 21.76 12.71 9.74 0 18.18-5.58 22.3-13.72 0.34 0.02 0.67 0.05 1.01 0.05 5.25 0 9.99-2.17 13.4-5.65 2.94 3.46 7.32 5.66 12.21 5.66 4.36 0 8.3-1.74 11.19-4.56 2.18 1.97 5.05 3.17 8.22 3.17 6.78 0 12.28-5.5 12.28-12.28S170.82 60.77 164.03 60.77z" />
-            </svg>
+        </svg>
     </div>
 
     <!-- Lighting -->
@@ -2175,28 +2176,28 @@
                 </ul>
             </div>
         </header>
-    
+
         <main>
-            <div id="draw-map-table" style="display: none;">
-                <canvas id="place-canvas" width="400" height="400" style="border:2px solid black;" ondrop=drop(event)
-                    ondragover=allowDrop(event)></canvas>
-    
+            <div id="draw-map-table" style="display: flex;">
+                <div id="canvas-container">
+                    <canvas id="place-canvas" width="1000" height="1000" style="border: 2px solid black"></canvas>
+                </div>
+
                 <div class="map-description-box">
-                    <div class="icon-map">
-                        <img id="stone" class="drag-drop-image" src="./images/rock.png" draggable="true"
-                            ondragstart=drag(event)>
-                        <img id="bush" class="drag-drop-image" src="./images/bush.png" draggable="true"
-                            ondragstart=drag(event)>
-                        <img id="mushroomoPink" class="drag-drop-image" src="./images/mushroomPink.png" draggable="true"
-                            ondragstart=drag(event)>
-                        <img id="mushroomOrange" class="drag-drop-image" src="./images/mushroomOrange.png" draggable="true"
-                            ondragstart=drag(event)>
-                        <img id="rootTree" class="drag-drop-image" src="./images/tree.png" draggable="true"
-                            ondragstart=drag(event)>
-                        <img id="tree" class="drag-drop-image" src="./images/tree1.png" draggable="true"
-                            ondragstart=drag(event)>
+                    <div id="images">
+                        <img id="stone" class="drag-drop-image" src="./images/rock.png" draggable="true">
+                        <img id="bush" class="drag-drop-image" src="./images/bush.png" draggable="true">
+                        <img id="mushroomoPink" class="drag-drop-image" src="./images/mushroomPink.png"
+                            draggable="true">
+                        <img id="mushroomOrange" class="drag-drop-image" src="./images/mushroomOrange.png"
+                            draggable="true">
+                        <img id="rootTree" class="drag-drop-image" src="./images/tree.png" draggable="true">
+                        <img id="tree" class="drag-drop-image" src="./images/tree1.png" draggable="true">
+                        <img draggable="true" src="http://i.imgur.com/8rmMZI3.jpg"></img>
+                        <img draggable="true" src="http://i.imgur.com/q9aLMza.png"></img>
+                        <img draggable="true" src="http://i.imgur.com/wMU4SFn.jpg"></img>
                     </div>
-    
+
                     <div id="background-canvas">
                         <button class="background-canvas-color" style="background: red;"
                             onclick="changeBGColor(event)"></button>
@@ -2220,12 +2221,12 @@
                     <button id="save-canvas-map" class="btn btn-info">Save</button>
                 </div>
             </div>
-            <div id="draw-player-table" style="display: flex;">
+            <div id="draw-player-table" style="display: none;">
                 <div class="player-description-box">
-    
+
                 </div>
                 <canvas id="canvas" width="400" height="400" style="border:2px solid black;"></canvas>
-    
+
                 <div class="player-description-box">
                     <div>
                         <button id="drawing-mode" class="btn btn-info">Cancel drawing mode</button>
@@ -2245,21 +2246,24 @@
                             <option>diamond</option>
                             <option>texture</option>
                         </select><br>
-    
+
                         <label for="drawing-line-width">Line width:</label>
-                        <input type="number" value="1" min="0" max="150" id="drawing-line-width" class="change-type"><br>
-    
+                        <input type="number" value="1" min="0" max="150" id="drawing-line-width"
+                            class="change-type"><br>
+
                         <label for="drawing-color">Line color:</label>
                         <input type="color" value="#000000" id="drawing-color" class="change-type"><br>
-    
+
                         <label for="drawing-shadow-color">Shadow color:</label>
                         <input type="color" value="#000000" id="drawing-shadow-color" class="change-type"><br>
-    
+
                         <label for="drawing-shadow-width">Shadow width:</label>
-                        <input type="number" value="0" min="0" max="50" id="drawing-shadow-width" class="change-type"><br>
-    
+                        <input type="number" value="0" min="0" max="50" id="drawing-shadow-width"
+                            class="change-type"><br>
+
                         <label for="drawing-shadow-offset">Shadow offset:</label>
-                        <input type="number" value="0" min="0" max="50" id="drawing-shadow-offset" class="change-type"><br>
+                        <input type="number" value="0" min="0" max="50" id="drawing-shadow-offset"
+                            class="change-type"><br>
                     </div>
                     <button id="change-canvas">>Change</button>
                 </div>
