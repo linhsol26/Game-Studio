@@ -43,6 +43,7 @@ let showMenu = () => {
 }
 
 login.onclick = () => {
+    document.getElementById('gif-homepage').style.display= 'none';
     if(loginSignIn.style.display) {
         loginSignIn.style.display = 'flex';
         loginSignUp.style.display = 'none';
