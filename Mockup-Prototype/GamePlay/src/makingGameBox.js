@@ -187,7 +187,7 @@
 })();
 
 //-------------------------------------------------------------------------
-var myCanvas = document.getElementById("place-canvas");
+var myCanvas = document.getElementById("canvas");
 var ctx = myCanvas.getContext("2d");
 
 let getMousePos = function (canvas, event) {
@@ -217,4 +217,19 @@ let drop = function (event) {
 
 let changeBGColor = function (evt) {
     myCanvas.style.background = evt.toElement.style.backgroundColor;
+}
+
+//-------
+let changeOption = document.getElementById('change-canvas');
+
+changeOption.onclick = function() {
+    document.getElementById('draw-map-table').style.display = 'flex';
+    document.getElementById('draw-player-table').style.display = 'none';
+}
+
+let changeOption2 = document.getElementById('change-canvas-2');
+
+changeOption2.onclick = function() {
+    document.getElementById('draw-map-table').style.display = 'none';
+    document.getElementById('draw-player-table').style.display = 'flex';
 }
