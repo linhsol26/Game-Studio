@@ -181,7 +181,7 @@
     let saveCanvas = $('save-canvas');
     saveCanvas.onclick = () => {
         let save = canvas.toDataURL("image/png");
-        document.write('<a target="_blank"><img src="'+save+'"/></a>');
+        document.write('<img src="' + save + '"/>');
         localStorage.setItem('Canvas', JSON.stringify(save));
     }
 })();
