@@ -187,7 +187,7 @@
 })();
 
 //-------------------------------------------------------------------------
-var myCanvas = document.getElementById("canvas");
+var myCanvas = document.getElementById("place-canvas");
 var ctx = myCanvas.getContext("2d");
 
 let getMousePos = function (canvas, event) {
