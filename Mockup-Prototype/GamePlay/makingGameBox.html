@@ -2229,12 +2229,14 @@
                         <button class="background-canvas-color" style="background: white;"
                             onclick="changeBGColor(event)"></button>
                     </div>
+
+                    <button id="change-canvas-2">>Change</button>
                 </div>
             </div>
             <div id="draw-player-table" style="display: flex;">
                 <div class="player-description-box">
     
-                </div>
+                </div> 
                 <canvas id="canvas" width="500" height="500" style="border:2px solid black;"></canvas>
     
                 <div class="player-description-box">
@@ -2272,11 +2274,11 @@
                         <label for="drawing-shadow-offset">Shadow offset:</label>
                         <input type="number" value="0" min="0" max="50" id="drawing-shadow-offset" class="change-type"><br>
                     </div>
+                    <button id="change-canvas">>Change</button>
                 </div>
             </div>
         </main>
     </div>
-    
     <script src="src/makingGameBox.js"></script>
     <script type="module" src="./src/background.js"></script>
 </body>
