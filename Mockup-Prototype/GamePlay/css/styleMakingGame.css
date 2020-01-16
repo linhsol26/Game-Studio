@@ -172,10 +172,10 @@ main {
 
 .player-description-box {
     margin: 2vh;
+    margin-left: 1vh;
     border: 2px solid black;
     width: 30%;
     min-height: 70vh;
-    border: 2px solid black;
 }
 
 .background-canvas-color {

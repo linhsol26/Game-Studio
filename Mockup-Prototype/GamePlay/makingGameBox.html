@@ -2192,7 +2192,7 @@
     
         <main>
             <div id="draw-map-table" style="display: none;">
-                <canvas id="place-canvas" width="500" height="500" style="border:2px solid black;" ondrop=drop(event)
+                <canvas id="place-canvas" width="400" height="400" style="border:2px solid black; opacity: 1" ondrop=drop(event)
                     ondragover=allowDrop(event)></canvas>
     
                 <div class="map-description-box">
@@ -2229,6 +2229,7 @@
                         <button class="background-canvas-color" style="background: white;"
                             onclick="changeBGColor(event)"></button>
                     </div>
+                    <button id="change-canvas-2">>Change</button>
                     <button id="clear-canvas" class="btn btn-info">Clear</button>
                 </div>
             </div>
@@ -2236,7 +2237,7 @@
                 <div class="player-description-box">
     
                 </div>
-                <canvas id="canvas" width="500" height="500" style="border:2px solid black;"></canvas>
+                <canvas id="canvas" width="400" height="400" style="border:2px solid black;"></canvas>
     
                 <div class="player-description-box">
                     <div>
