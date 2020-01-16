@@ -9,7 +9,7 @@ body {
 }
 
 main {
-    opacity: .5;
+    opacity: .8;
 }
 
 header {
@@ -133,21 +133,21 @@ div li {
 }
 
 #btn-start-game {
+    margin: 0 auto;
+    opacity: 1;
     position: relative;
     display: inline-block;
-    padding: 15px 30px;
-    color: white;
+    padding: 2vh;
+    color: black;
     text-decoration: none;
-    letter-spacing: 3px;
-    font-size: 20px;
+    letter-spacing: 1vh;
+    font-size: 1.5rem;
     overflow: hidden;
-    transition: 0.2s;
-    margin-left: 60px;
+    transition: 0.1s;
 }
 
 #btn-start-game:hover {
     color: #255784;
-    background-color: cadetblue;
     box-shadow: 0 0 10px #2196f3, 0 0 40px #2196f3, 0 0 80px #2196f3;
     transition-delay: 0.95s;
 }

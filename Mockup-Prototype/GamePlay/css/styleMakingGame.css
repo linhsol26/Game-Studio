@@ -97,7 +97,7 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    opacity: .5;
+    opacity: .8;
 }
 
 .change-type {

@@ -54,7 +54,7 @@ div li {
     align-items: center;
     background: linear-gradient(to right, #c9d6ff, #e2e2e2);
     box-shadow: 0px 8px 8px 0px rgba(0, 0, 0, .8);
-    opacity: .5;
+    opacity: .6;
 }
 
 #login,
