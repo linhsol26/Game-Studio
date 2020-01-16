@@ -181,13 +181,13 @@
     let saveCanvas = $('save-canvas');
     saveCanvas.onclick = () => {
         let save = canvas.toDataURL("image/png");
-        document.write('<img src="'+save+'"/>');
+        document.write('<img src="' + save + '"/>');
         localStorage.setItem('Canvas', JSON.stringify(save));
     }
 })();
 
 //-------------------------------------------------------------------------
-var myCanvas = document.getElementById("place-canvas");
+var myCanvas = document.getElementById("canvas");
 var ctx = myCanvas.getContext("2d");
 
 let getMousePos = function (canvas, event) {
@@ -218,3 +218,4 @@ let drop = function (event) {
 let changeBGColor = function (evt) {
     myCanvas.style.background = evt.toElement.style.backgroundColor;
 }
+
