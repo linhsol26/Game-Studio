@@ -181,7 +181,14 @@
     let saveCanvas = $('save-canvas');
     saveCanvas.onclick = () => {
         let save = canvas.toDataURL("image/png");
-        document.write('<img src="' + save + '"/>');
+        let animationImg = document.getElementsByClassName('animation');
+        for(let i = 0; i < animationImg.length; i++) {
+            if(animationImg[i].src == null) {
+                animationImg[i].src = save;
+                console.log('ccc');
+                return;
+            }   
+        }
         localStorage.setItem('Canvas', JSON.stringify(save));
     }
 })();
