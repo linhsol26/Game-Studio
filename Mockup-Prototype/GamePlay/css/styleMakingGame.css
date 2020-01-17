@@ -173,7 +173,21 @@ main {
     margin-left: 1vh;
     border: 2px solid black;
     width: 30%;
-    min-height: 70vh;
+    min-height: 80vh;
+}
+
+#animation {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.animation {
+    border: 2px solid black;
+    margin: 1vh;
+    width: 10vmin;
+    min-height: 10vmin;
 }
 
 .background-canvas-color {
