@@ -187,49 +187,88 @@
 })();
 
 //-------------------------------------------------------------------------
-var myCanvas = document.getElementById("place-canvas");
-var ctx = myCanvas.getContext("2d");
+let canvas = new fabric.Canvas('place-canvas');
 
-let getMousePos = function (canvas, event) {
-    var rect = canvas.getBoundingClientRect();
-    return {
-        x: event.clientX - rect.left,
-        y: event.clientY - rect.top
-    };
+function handleDragStart(e) {
+    [].forEach.call(images, function (img) {
+        img.classList.remove('img_dragging');
+    });
+    this.classList.add('img_dragging');
 }
 
-let allowDrop = function (event) {
-    event.preventDefault();
+function handleDragOver(e) {
+    if (e.preventDefault) {
+        e.preventDefault();
+    }
+
+    e.dataTransfer.dropEffect = 'copy';
+    return false;
 }
 
-let drag = function (event) {
-    event.dataTransfer.setData('text', event.target.id);
-    console.log(event.target.id);
+function handleDragEnter(e) {
+
+    this.classList.add('over');
 }
 
-let drop = function (event) {
-    let pos = getMousePos(myCanvas, event);
-    event.preventDefault();
-    let data = event.dataTransfer.getData('text');
-    let image = document.getElementById(data);
-    ctx.drawImage(image, pos.x, pos.y);
+function handleDragLeave(e) {
+    this.classList.remove('over');
 }
+
+function handleDrop(e) {
+    if (e.stopPropagation) {
+        e.stopPropagation();
+    }
+
+    let img = document.querySelector('#images img.img_dragging');
+    console.log('event: ', e);
+    let newImage = new fabric.Image(img, {
+        width: img.width,
+        height: img.height,
+        left: e.layerX,
+        top: e.layerY
+    });
+    canvas.add(newImage);
+    return false;
+}
+
+function handleDragEnd(e) {
+    [].forEach.call(images, function (img) {
+        img.classList.remove('img_dragging');
+    });
+}
+
+if (Modernizr.draganddrop) {
+    var images = document.querySelectorAll('#images img');
+    [].forEach.call(images, function (img) {
+        img.addEventListener('dragstart', handleDragStart, false);
+        img.addEventListener('dragend', handleDragEnd, false);
+    });
+    var canvasContainer = document.getElementById('canvas-container');
+    canvasContainer.addEventListener('dragenter', handleDragEnter, false);
+    canvasContainer.addEventListener('dragover', handleDragOver, false);
+    canvasContainer.addEventListener('dragleave', handleDragLeave, false);
+    canvasContainer.addEventListener('drop', handleDrop, false);
+} else {
+    alert("This browser doesn't support the HTML5 Drag and Drop API.");
+}
+
+let myCanvas = document.getElementById('place-canvas');
 
 let changeBGColor = function (evt) {
     myCanvas.style.background = evt.toElement.style.backgroundColor;
 }
 
-//-------
+//-------------------------------------------------------------------
 let changeOption = document.getElementById('change-canvas');
 
-changeOption.onclick = function() {
+changeOption.onclick = function () {
     document.getElementById('draw-map-table').style.display = 'flex';
     document.getElementById('draw-player-table').style.display = 'none';
 }
 
 let changeOption2 = document.getElementById('change-canvas-2');
 
-changeOption2.onclick = function() {
+changeOption2.onclick = function () {
     document.getElementById('draw-map-table').style.display = 'none';
     document.getElementById('draw-player-table').style.display = 'flex';
 }
